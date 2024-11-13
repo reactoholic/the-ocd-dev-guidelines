@@ -43,7 +43,7 @@ export default function App() {
         <Typography fontFamily="monospace" fontSize={'clamp(1.25rem, 5vw, 3.5rem)'}>
           Welcome to the OCD developer guidelines!
           <br />
-          <Link href="/" underline="always">
+          <Link href="/home" underline="always">
             You&apos;re not alone.
           </Link>
         </Typography>
