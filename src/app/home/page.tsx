@@ -1,10 +1,12 @@
-import { Link, Typography } from '@mui/material'
+import Link from 'next/link'
+
+import { Button } from 'primereact/button'
 
 export default function HomePage() {
   return (
-    <>
-      <Typography variant="h1">Home Page</Typography>
-      <Link href="/">Go to Main Page</Link>
-    </>
+    <div className="p-3">
+      <Button className="p-2" label="Praim Baton" />
+      <Link href="/">Gou tu lending peijer</Link>
+    </div>
   )
 }

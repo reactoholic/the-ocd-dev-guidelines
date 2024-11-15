@@ -10,7 +10,7 @@
     "url": "https://github.com/reactoholic/the-ocd-dev-guidelines"
   },
   "engines": {
-    "node": "^20",
+    "node": "^22",
     "npm": "^10"
   },
   "scripts": {
@@ -31,23 +31,21 @@
     ]
   },
   "dependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
-    "@mui/joy": "^5.0.0-beta.48",
-    "@mui/material": "^6.1.6",
     "@reduxjs/toolkit": "^2.3.0",
-    "framer-motion": "^11.11.15",
     "next": "14.2.17",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "primeflex": "^3.3.1",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.8.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-redux": "^9.1.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
     "eslint": "^8.0.0",
     "eslint-config-next": "14.2.17",
     "eslint-config-prettier": "^9.1.0",
@@ -55,6 +53,6 @@
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
-    "typescript": "^5.0.0"
+    "typescript": "^5.6.3"
   }
 }

@@ -2,7 +2,13 @@ import type { Metadata } from 'next'
 
 import localFont from 'next/font/local'
 
-import '../../public/styles/globals.css'
+import { PrimeReactProvider } from 'primereact/api'
+
+import '/public/styles/globals.css'
+import 'primereact/resources/themes/saga-blue/theme.css'
+import 'primereact/resources/primereact.min.css'
+import 'primeicons/primeicons.css'
+import 'primeflex/primeflex.css'
 
 const geistSans = localFont({
   src: '../../public/fonts/GeistVF.woff',
@@ -23,7 +29,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <PrimeReactProvider value={{ ripple: true, cssTransition: true, locale: 'en' }}>
+          {children}
+        </PrimeReactProvider>
+      </body>
     </html>
   )
 }
