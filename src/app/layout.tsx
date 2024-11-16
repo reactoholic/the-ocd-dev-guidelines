@@ -5,10 +5,12 @@ import localFont from 'next/font/local'
 import { PrimeReactProvider } from 'primereact/api'
 
 import '/public/styles/globals.css'
-import 'primereact/resources/themes/saga-blue/theme.css'
+import 'primereact/resources/themes/lara-light-blue/theme.css'
 import 'primereact/resources/primereact.min.css'
 import 'primeicons/primeicons.css'
 import 'primeflex/primeflex.css'
+
+import classes from './_app-styles.module.scss'
 
 const geistSans = localFont({
   src: '../../public/fonts/GeistVF.woff',
@@ -31,7 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <PrimeReactProvider value={{ ripple: true, cssTransition: true, locale: 'en' }}>
-          {children}
+          <div className={classes.mainLayout}>{children}</div>
         </PrimeReactProvider>
       </body>
     </html>
