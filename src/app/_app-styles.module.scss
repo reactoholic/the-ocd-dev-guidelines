@@ -6,7 +6,7 @@
 }
 
 .app {
-  //   border: 5px dashed red;
+  // border: 5px dashed red;
 
   display: flex;
   align-items: center;
@@ -24,5 +24,6 @@
   .subtitle {
     margin-left: auto;
     font-size: clamp(2rem, 2vw, 3rem);
+    margin-right: clamp(10rem, 5vw, 15rem);
   }
 }

@@ -1,7 +1,15 @@
-export function ThemeWidget({ className }: { className?: string }) {
+'use client'
+
+import { useState } from 'react'
+
+import { InputSwitch } from 'primereact/inputswitch'
+
+export const ThemeWidget = ({ className }: { className?: string }) => {
+  const [isDark, setIsDark] = useState(false)
+
   return (
     <div className={className}>
-      <span>Theme Widget</span>
+      <InputSwitch checked={isDark} onChange={() => setIsDark(!isDark)} />
     </div>
   )
 }
