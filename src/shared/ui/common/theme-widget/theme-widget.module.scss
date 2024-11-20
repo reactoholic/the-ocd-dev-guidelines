@@ -1,18 +1,23 @@
 .theme-widget {
   .toggle-wrapper {
-    // border: 1px solid;
-
     display: flex;
     column-gap: 0.25rem;
     align-items: center;
 
     padding: 0.35rem;
     border-radius: 0.5rem;
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+
+    &.dark {
+      background-color: #1a252f;
+    }
   }
 
   .icon {
     font-size: 1.5rem;
+
+    &.light {
+      color: #fff;
+    }
 
     &.sun {
       color: #f1c40f;

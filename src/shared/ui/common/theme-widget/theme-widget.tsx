@@ -15,7 +15,7 @@ export const ThemeWidget = ({ className }: ThemeWidgetProps) => {
 
   return (
     <div className={clsx(classes['theme-widget'], className)}>
-      <div className={classes['toggle-wrapper']}>
+      <div className={clsx(classes['toggle-wrapper'], isDark && classes.dark)}>
         <i className={clsx('pi pi-sun', classes.icon, !isDark && classes.sun)} />
 
         <InputSwitch
