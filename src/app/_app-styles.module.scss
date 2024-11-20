@@ -26,4 +26,16 @@
     font-size: clamp(2rem, 2vw, 3rem);
     margin-right: clamp(10rem, 5vw, 15rem);
   }
+
+  .themePanel {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+
+    padding: 0.5rem;
+  }
 }
