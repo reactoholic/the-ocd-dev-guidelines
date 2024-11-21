@@ -20,9 +20,10 @@
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "format:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --config .prettierrc",
     "lint": "next lint",
+    "lint-staged": "lint-staged",
     "prepare": "npx husky",
-    "start": "next start",
-    "lint-staged": "lint-staged"
+    "prune": "rm -rf node_modules && rm package-lock.json && npm install",
+    "start": "next start"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
