@@ -1,13 +1,31 @@
-.mainLayout {
-  //   border: 5px dashed blue;
+$linkColor: #2563eb;
+$headerHeight: 60px;
 
+.mainLayout {
   height: 100%;
   padding: clamp(1rem, 5vw, 2rem);
+
+  .header {
+    display: flex;
+    align-items: center;
+
+    border-radius: 0.25rem;
+    min-height: $headerHeight;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    .theme-panel {
+      display: flex;
+      column-gap: 0.5rem;
+      align-items: center;
+
+      padding: 0.5rem;
+      margin-left: auto;
+      border-radius: 0.25rem;
+    }
+  }
 }
 
 .app {
-  // border: 5px dashed red;
-
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -15,27 +33,20 @@
   gap: clamp(1rem, 5vw, 2rem);
 
   width: 100%;
-  height: 100%;
+  height: calc(100% - $headerHeight);
 
   .title {
     font-size: clamp(3rem, 5vw, 4rem);
   }
 
   .subtitle {
+    color: $linkColor;
     margin-left: auto;
     font-size: clamp(2rem, 2vw, 3rem);
     margin-right: clamp(10rem, 5vw, 15rem);
-  }
 
-  .themePanel {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    display: flex;
-    align-items: center;
-    column-gap: 0.5rem;
-
-    padding: 0.5rem;
+    &:visited {
+      color: $linkColor;
+    }
   }
 }

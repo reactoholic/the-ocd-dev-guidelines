@@ -9,13 +9,15 @@
 
 html,
 body {
+  position: relative;
+
   margin: 0;
   padding: 0;
   height: 100vh;
   max-width: 100vw;
   overflow-x: hidden;
   font-family: var(--font-family);
-  background-color: #1a252f;
+  /* background-color: #1a252f; */
 }
 
 img {

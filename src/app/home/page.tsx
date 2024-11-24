@@ -1,12 +1,13 @@
 import Link from 'next/link'
 
-import { Button } from 'primereact/button'
+const HomePage = () => {
+  console.log('<HomePage />')
 
-export default function HomePage() {
   return (
-    <div className="p-3">
-      <Button className="p-2" label="Praim Baton" />
+    <div className="p-3" style={{ position: 'relative' }}>
       <Link href="/">Gou tu lending peijer</Link>
     </div>
   )
 }
+
+export default HomePage

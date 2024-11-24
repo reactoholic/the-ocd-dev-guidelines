@@ -1,4 +1,7 @@
 .theme-widget {
+  display: flex;
+  align-items: center;
+
   .toggle-wrapper {
     display: flex;
     column-gap: 0.25rem;
@@ -8,7 +11,7 @@
     border-radius: 0.5rem;
 
     &.dark {
-      background-color: #1a252f;
+      // background-color: #1a252f;
     }
   }
 

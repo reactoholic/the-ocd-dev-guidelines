@@ -1,17 +1,17 @@
 'use client'
 
+import Link from 'next/link'
+
 import clsx from 'clsx'
 import { InputSwitch } from 'primereact/inputswitch'
-import { useLocalStorage } from '@uidotdev/usehooks'
-
-import { constants } from '@/shared/constants'
 
 import classes from './theme-widget.module.scss'
+import { Theme, useTheme } from '@/shared/context/theme.context'
 
-export const ThemeWidget = ({ className }: ThemeWidgetProps) => {
-  const [theme, setTheme] = useLocalStorage<Theme>(constants.localStorageKeys.theme, Theme['LIGHT'])
+export const ThemeWidget = ({ className }: { className?: string }) => {
+  const themeCtx = useTheme()
 
-  const isDark = theme === Theme['DARK']
+  const isDark = themeCtx?.theme === Theme['DARK']
 
   return (
     <div className={clsx(classes['theme-widget'], className)}>
@@ -20,22 +20,16 @@ export const ThemeWidget = ({ className }: ThemeWidgetProps) => {
 
         <InputSwitch
           checked={isDark}
-          onChange={(e) => setTheme(e.value ? Theme['DARK'] : Theme['LIGHT'])}
+          name="theme-switch"
+          onChange={(e) => themeCtx?.setTheme(e.value ? Theme['DARK'] : Theme['LIGHT'])}
         />
 
         <i className={clsx('pi pi-moon', classes.icon, isDark && classes.moon)} />
       </div>
 
-      <i className={clsx('pi pi-github', classes.icon)} />
+      <Link href="https://github.com/reactoholic/the-ocd-dev-guidelines" target="_blank">
+        <i className={clsx('pi pi-github', classes.icon)} />
+      </Link>
     </div>
   )
-}
-
-type ThemeWidgetProps = {
-  className?: string
-}
-
-const enum Theme {
-  DARK = 'DARK',
-  LIGHT = 'LIGHT'
 }
