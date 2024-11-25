@@ -1,2 +1,10 @@
+$primaryDarkColor: #1a252f;
+$primaryLightColor: #ffffff;
+
 :root {
+  --primary-text-color-light: $primaryDarkColor;
+  --primary-background-color-light: $primaryLightColor;
+
+  --primary-text-color-dark: $primaryLightColor;
+  --primary-background-color-dark: $primaryDarkColor;
 }
