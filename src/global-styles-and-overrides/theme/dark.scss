@@ -1,0 +1,11 @@
+@use '../variables.scss' as *;
+
+[data-theme='DARK'] {
+  --primary-brand-color: $primary-brand-color;
+
+  --primary-text-color: $primary-light-color;
+
+  --primary-background-color: $primary-dark-color;
+
+  --primary-box-shadow: 0 4px 6px rgba(112, 112, 112, 0.1);
+}

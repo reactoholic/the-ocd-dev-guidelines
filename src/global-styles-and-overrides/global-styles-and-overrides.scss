@@ -1,1 +1,3 @@
-@use './global-styles.scss';
+@use './variables.scss' as *;
+@use './theme/index.scss' as *;
+@use './global-styles.scss' as *;

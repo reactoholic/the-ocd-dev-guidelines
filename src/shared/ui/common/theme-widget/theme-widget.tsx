@@ -3,26 +3,26 @@
 import Link from 'next/link'
 
 import clsx from 'clsx'
-import { InputSwitch } from 'primereact/inputswitch'
+import { InputSwitch, type InputSwitchChangeEvent } from 'primereact/inputswitch'
 
-import classes from './theme-widget.module.scss'
 import { Theme, useTheme } from '@/shared/context/theme.context'
 
-export const ThemeWidget = ({ className }: { className?: string }) => {
+import classes from './theme-widget.module.scss'
+
+export const ThemeWidget = () => {
   const themeCtx = useTheme()
 
   const isDark = themeCtx?.theme === Theme['DARK']
 
+  const onThemeSwitchToggle = (e: InputSwitchChangeEvent) =>
+    themeCtx?.setTheme(e.value ? Theme['DARK'] : Theme['LIGHT'])
+
   return (
-    <div className={clsx(classes['theme-widget'], className)}>
-      <div className={clsx(classes['toggle-wrapper'], isDark && classes.dark)}>
+    <div className={classes['theme-widget']}>
+      <div className={classes['toggle-wrapper']}>
         <i className={clsx('pi pi-sun', classes.icon, !isDark && classes.sun)} />
 
-        <InputSwitch
-          checked={isDark}
-          name="theme-switch"
-          onChange={(e) => themeCtx?.setTheme(e.value ? Theme['DARK'] : Theme['LIGHT'])}
-        />
+        <InputSwitch checked={isDark} name="theme-switch" onChange={onThemeSwitchToggle} />
 
         <i className={clsx('pi pi-moon', classes.icon, isDark && classes.moon)} />
       </div>

@@ -1,26 +1,23 @@
 .theme-widget {
   display: flex;
+  column-gap: 0.5rem;
   align-items: center;
+
+  padding: 0.5rem;
+  margin-left: auto;
 
   .toggle-wrapper {
     display: flex;
-    column-gap: 0.25rem;
+    column-gap: 0.5rem;
     align-items: center;
 
     padding: 0.35rem;
     border-radius: 0.5rem;
-
-    &.dark {
-      // background-color: #1a252f;
-    }
   }
 
   .icon {
     font-size: 1.5rem;
-
-    &.light {
-      color: #fff;
-    }
+    color: var(--primary-text-color);
 
     &.sun {
       color: #f1c40f;

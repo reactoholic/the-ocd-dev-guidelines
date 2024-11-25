@@ -1,17 +1,8 @@
-$primaryDarkColor: #1a252f;
-$primaryLightColor: #ffffff;
+@use './variables.scss' as *;
 
 :root {
-  --primary-dark-color: #1a252f;
-  --primary-light-color: #ffffff;
-}
+  --primary-brand-color: $primary-brand-color;
 
-[data-theme='LIGHT'] {
-  --primary-text-color: var(--primary-dark-color, $primaryDarkColor);
-  --primary-background-color: var(--primary-light-color, $primaryLightColor);
-}
-
-[data-theme='DARK'] {
-  --primary-text-color: var(--primary-light-color, $primaryLightColor);
-  --primary-background-color: var(--primary-dark-color, $primaryDarkColor);
+  --primary-dark-color: $primary-dark-color;
+  --primary-light-color: $primary-light-color;
 }
