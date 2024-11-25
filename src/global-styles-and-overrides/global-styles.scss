@@ -1,0 +1,17 @@
+$primaryDarkColor: #1a252f;
+$primaryLightColor: #ffffff;
+
+:root {
+  --primary-dark-color: #1a252f;
+  --primary-light-color: #ffffff;
+}
+
+[data-theme='LIGHT'] {
+  --primary-text-color: var(--primary-dark-color, $primaryDarkColor);
+  --primary-background-color: var(--primary-light-color, $primaryLightColor);
+}
+
+[data-theme='DARK'] {
+  --primary-text-color: var(--primary-light-color, $primaryLightColor);
+  --primary-background-color: var(--primary-dark-color, $primaryDarkColor);
+}

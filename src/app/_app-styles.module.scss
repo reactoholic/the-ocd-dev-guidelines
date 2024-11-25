@@ -36,6 +36,7 @@ $headerHeight: 60px;
   height: calc(100% - $headerHeight);
 
   .title {
+    color: var(--primary-text-color);
     font-size: clamp(3rem, 5vw, 4rem);
   }
 

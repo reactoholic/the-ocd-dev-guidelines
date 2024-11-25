@@ -1,6 +1,6 @@
 'use client'
 
-import { useContext, createContext, PropsWithChildren } from 'react'
+import { useEffect, useContext, createContext, PropsWithChildren } from 'react'
 
 import { useLocalStorage } from '@uidotdev/usehooks'
 
@@ -12,6 +12,10 @@ export const ThemeContext = createContext<null | ThemeContextType>(null)
 // Theme Provider
 export const ThemeProvider = ({ children }: PropsWithChildren) => {
   const [theme, setTheme] = useLocalStorage<Theme>(constants.localStorageKeys.theme, Theme['LIGHT'])
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+  }, [theme])
 
   return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>
 }
