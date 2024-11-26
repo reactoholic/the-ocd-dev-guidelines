@@ -1,10 +1,10 @@
 import Link from 'next/link'
 
-const HomePage = () => {
-  console.log('<HomePage />')
+import classes from './_home-styles.module.scss'
 
+const HomePage = () => {
   return (
-    <div className="p-3" style={{ position: 'relative' }}>
+    <div className={classes.home}>
       <Link href="/">Gou tu lending peijer</Link>
     </div>
   )
