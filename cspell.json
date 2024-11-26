@@ -1,8 +1,14 @@
 {
   "version": "0.2",
   "ignorePaths": [],
-  "dictionaryDefinitions": [],
-  "dictionaries": [],
+  "dictionaryDefinitions": [
+    {
+      "name": "custom-dictionary",
+      "path": "./.cspell/custom-dictionary.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": ["custom-dictionary"],
   "words": ["primeflex", "primeicons", "uidotdev", "usehooks"],
   "ignoreWords": [],
   "import": []

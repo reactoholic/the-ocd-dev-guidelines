@@ -27,8 +27,20 @@ export const ThemeWidget = () => {
         <i className={clsx('pi pi-moon', classes.icon, isDark && classes.moon)} />
       </div>
 
-      <Link href="https://github.com/reactoholic/the-ocd-dev-guidelines" target="_blank">
+      <Link
+        href="https://github.com/reactoholic/the-ocd-dev-guidelines"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i className={clsx('pi pi-github', classes.icon)} />
+      </Link>
+
+      <Link
+        href="https://www.linkedin.com/in/petar-kolev"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className={clsx('pi pi-linkedin', classes.icon)} />
       </Link>
     </div>
   )
