@@ -7,7 +7,7 @@ import classes from './_app-styles.module.scss'
 export const Header = () => {
   return (
     <div className={classes.header}>
-      <ThemeWidget className={classes['theme-panel']} />
+      <ThemeWidget />
     </div>
   )
 }
