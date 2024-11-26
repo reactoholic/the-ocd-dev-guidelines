@@ -1,11 +1,9 @@
-@use '../variables.scss' as *;
-
 [data-theme='LIGHT'] {
-  --primary-brand-color: $primary-brand-color;
+  --primary-brand-color: var(--primary-brand-color);
 
-  --primary-text-color: $primary-dark-color;
+  --primary-text-color: var(--primary-dark-color);
 
-  --primary-background-color: $primary-light-color;
+  --primary-background-color: var(--primary-light-color);
 
-  --primary-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --primary-box-shadow: var(--primary-dark-box-shadow);
 }

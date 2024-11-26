@@ -1,4 +1,5 @@
-$linkColor: #2563eb;
+@use '../global-styles-and-overrides/scss-mixins.scss' as *;
+
 $headerHeight: 60px;
 
 .mainLayout {
@@ -26,18 +27,22 @@ $headerHeight: 60px;
   height: calc(100% - $headerHeight);
 
   .title {
-    color: var(--primary-text-color);
     font-size: clamp(3rem, 5vw, 4rem);
+    @include text-gradient(
+      var(--primary-brand-color),
+      rgb(254, 24, 24),
+      var(--primary-brand-color)
+    );
   }
 
   .subtitle {
-    color: $linkColor;
+    color: var(--primary-brand-color);
     margin-left: auto;
     font-size: clamp(2rem, 2vw, 3rem);
     margin-right: clamp(10rem, 5vw, 15rem);
 
     &:visited {
-      color: $linkColor;
+      color: var(--primary-brand-color);
     }
   }
 }

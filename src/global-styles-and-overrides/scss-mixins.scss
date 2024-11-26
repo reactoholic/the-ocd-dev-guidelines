@@ -1,0 +1,11 @@
+@mixin text-gradient($colors...) {
+  $gradient: ();
+  @each $color in $colors {
+    $gradient: append($gradient, $color, comma);
+  }
+  background: -webkit-linear-gradient(45deg, $gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}

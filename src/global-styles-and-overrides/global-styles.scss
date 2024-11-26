@@ -1,8 +1,14 @@
-@use './variables.scss' as *;
+@use './scss-variables.scss' as *;
 
 :root {
-  --primary-brand-color: $primary-brand-color;
+  // Brand
+  --primary-brand-color: #{$primary-brand-color};
 
-  --primary-dark-color: $primary-dark-color;
-  --primary-light-color: $primary-light-color;
+  // Colors
+  --primary-dark-color: #{$primary-dark-color};
+  --primary-light-color: #{$primary-light-color};
+
+  // Misc
+  --primary-dark-box-shadow: #{$primary-dark-box-shadow};
+  --primary-light-box-shadow: #{$primary-light-box-shadow};
 }
