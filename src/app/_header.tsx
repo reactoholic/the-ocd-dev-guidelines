@@ -1,6 +1,6 @@
 import { BreadCrumb } from 'primereact/breadcrumb'
 
-import { ThemeWidget } from '@/shared/ui/common/theme-widget'
+import { ThemeWidget } from '@/shared/ui/theme-widget'
 
 import classes from './_app-styles.module.scss'
 
