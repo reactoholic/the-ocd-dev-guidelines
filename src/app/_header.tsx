@@ -10,8 +10,7 @@ export const Header = () => {
     { label: 'Computer' },
     { label: 'Accessories' },
     { label: 'Keyboard' },
-    { label: 'Wireless' },
-    { label: 'Test CodeRabbitAI' }
+    { label: 'Wireless' }
   ]
   const home = { icon: 'pi pi-home', url: 'https://primereact.org' }
 
