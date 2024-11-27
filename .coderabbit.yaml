@@ -1,5 +1,5 @@
 language: en-US
-tone_instructions: 'Provide clear and constructive feedback.'
+tone_instructions: 'Provide clear and constructive feedback taking the fact the app is Next.js v14 with TypeScript, PrimeReact for Design system and scss modules for styling into account.'
 early_access: true
 reviews:
   profile: chill
@@ -16,6 +16,8 @@ reviews:
     - '!dist/**'
     - 'src/**/*.ts'
     - 'src/**/*.tsx'
+    - '!**/.github/**'
+    - '!**/node_modules/**' # Exclude dependencies
   tools:
     eslint:
       enabled: true
