@@ -1,0 +1,32 @@
+language: en-US
+tone_instructions: 'Provide clear and constructive feedback.'
+early_access: true
+reviews:
+  profile: chill
+  auto_review:
+    enabled: true
+    auto_incremental_review: true
+    labels:
+      - 'frontend'
+      - 'typescript'
+    base_branches:
+      - 'main'
+      - 'develop'
+  path_filters:
+    - '!dist/**'
+    - 'src/**/*.ts'
+    - 'src/**/*.tsx'
+  tools:
+    eslint:
+      enabled: true
+    markdownlint:
+      enabled: true
+    gitleaks:
+      enabled: true
+  high_level_summary: true
+  changed_files_summary: true
+knowledge_base:
+  pull_requests:
+    scope: auto
+  issues:
+    scope: auto
